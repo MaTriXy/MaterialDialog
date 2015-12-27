@@ -1,6 +1,7 @@
 # Material Dialog v1.2.2
 
-This is an Android library, I call it MaterialDialog. It's very easy to use. Just `new` it & call `show()` method, then the beautiful AlertDialog will show automatedly. It is artistic, conforms to Google Material Design. I hope that you will like it, and enjoys it. ^ ^
+This is an Android library, I call it MaterialDialog. It's very easy to use. 
+Just `new` it & call `show()` method, then the beautiful AlertDialog will show automatically. It is artistic, conforms to Google Material Design. I hope that you will like it, and enjoys it. ^ ^
 
 ## Screenshots
 
@@ -22,7 +23,9 @@ Example:
 
 ```groovy
 dependencies {
-    compile 'me.drakeet.materialdialog:library:1.2.2'
+    compile 'me.drakeet.materialdialog:library:1.2.8'
+    // I have uploaded v1.2.8 on 2015-11-22, if it doesn't take effect or your 
+    // gradle cannot find it in maven central, you may try v1.2.2.
 }
 ```
 
@@ -39,9 +42,6 @@ Import the library, then add it to your `/settings.gradle` and `/app/build.gradl
 It's very easy, just like this:
 
 ```java
-// Note: if you use maven library, this code below may not return ifself(`this`),
-// because I just updated the version 1.0.7 to maven, the maven central may not yet reflect over.
-//（2014-11-07 00:02:16）
 MaterialDialog mMaterialDialog = new MaterialDialog(this)
     .setTitle("MaterialDialog")
     .setMessage("Hello world!")
@@ -68,7 +68,7 @@ mMaterialDialog.show();
 // You can change the message anytime. after show
 mMaterialDialog.setMessage("你好，世界~");
 ```
-With the first initial and `mMaterialDialog.show()`, it will show automatedly.
+With the first initial and `mMaterialDialog.show()`, it will show automatically.
 
 In addition, you can call `setView (View v) ` & `setContentView()` to set a View what you like or
 custom after the instantiation. This replaces the title and message.
@@ -84,32 +84,33 @@ And, you can call `setBackgroundResource(int resId)` or `setBackground(Drawable 
 ```java
 mMaterialDialog.setBackgroundResource(R.drawable.background);
 ```
+## 1.2.8
+* Fix the problem of soft keyboard repeat display
+* Fix the action buttons became dismiss when scroll view height is too long.
+* Add get buttons so that you can custom them.
+* Update the versions of gradle and some build tools.
 
 ## 1.2.1
-Now, It has been able to run perfectly on L.
-Fix the button style on L.
-Fix the problem, so that it can correctly use `AutoCompleteTextView` & `EditText`.
+* Now, It has been able to run perfectly on L.
+* Fix the button style on L.
+* Fix the problem, so that it can correctly use `AutoCompleteTextView` & `EditText`.
 
 ## 1.1.0
-fix the keyboard/input bug when more show. 
+* Fix the keyboard/input bug when more show. 
 
 ## 1.0.9
-If title is null, no show it, but I think it is ugly without title...;
-Add set Button's text by string resId, e.g. `setPositiveButton(android.R.string.yes, new View.OnClickListener() `
+* If title is null, no show it, but I think it is ugly without title...;
+* Add set Button's text by string resId, e.g. `setPositiveButton(android.R.string.yes, new View.OnClickListener() `
 
 ## 1.0.8
-Add every method return `this`
+* Add every method return `this`
 
 ## 1.0.7
-Fix the BUG of `Can not show soft keyboard automatically when focus is on an EditText.`
-
-Add `setCanceledOnTouchOutside()` // You should set it before `show()`, otherwise, it can't take effect.
-
-Add `setContentView()`
-
-Add Button press style;
-
-...
+* Fix the BUG of `Can not show soft keyboard automatically when focus is on an EditText.`
+* Add `setCanceledOnTouchOutside()` // You should set it before `show()`, otherwise, it can't take effect.
+* Add `setContentView()`
+* Add Button press style;
+* ...
 
 I recently was too busy, if you have any Suggestions for the library, I encourage you to read the source code, and try to achieve your requirements, and then I'll merger it. We create good world together.
 
@@ -117,15 +118,15 @@ I recently was too busy, if you have any Suggestions for the library, I encourag
 
 ## DEMO
 
-[demo apk](/demo-release.apk)
+[demo apk v1.2.8](/demo-debug.apk)
 
 ## About me
 
-A student in mainland China. (^ ^ Thanks daimajia)
+I am a student in China, I love reading pure literature, love Japanese culture and Hongkong music. At the same time, I am also obsessed with writing code. If you have any questions or want to make friends with me, you can write to me: drakeet.me@gmail.com
 
-My blog: http://drakeet.me
+In addition, my blog: http://drakeet.me
 
-More about me: http://drakeet.me/about
+If you like my open source projects, you can follow me: https://github.com/drakeet
 
 License
 ============
